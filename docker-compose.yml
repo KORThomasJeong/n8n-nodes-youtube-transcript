@@ -1,0 +1,9 @@
+services:
+  youtube-transcript-api:
+    build: .
+    container_name: yt-transcript-api
+    ports:
+      - '3001:3000'
+    env_file:
+      - .env
+    restart: unless-stopped 
